@@ -15,7 +15,7 @@ interface CVData {
 }
 
 const cvData: CVData = {
-  photo: 'https://placehold.co/600x400?text=MS',
+  photo: 'https://placehold.co/200x200?text=MS',
   name: 'Marek',
   lastName: 'Szczepanik',
   position: 'Developer',
@@ -32,6 +32,34 @@ const cvData: CVData = {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <h1>Hello World!</h1>
+    <main>
+        <header>
+          <h1>CV {cvData.name} {cvData.lastName}</h1>
+        </header>
+        <aside>
+          <h2>Dane osobowe</h2>
+          <img src={cvData.photo} alt={`${cvData.name} ${cvData.lastName} zdjęcie profilowe`} />
+          <p>{cvData.name} {cvData.lastName}</p>
+          <small>{cvData.position}</small>
+        </aside>
+        <section>
+          <h2>Doświadczenie zawodowe</h2>
+          <ul>
+            {cvData.experience.map(doswiadczenie =>(
+              <li key={doswiadczenie.year}>
+                <strong>{doswiadczenie.year}</strong> - {doswiadczenie.description}
+              </li>
+            ))}
+          </ul>
+          <h2>Edukacja</h2>
+          <ul>
+            {cvData.education.map((szkola, index) => (
+              <li key={index}>
+                {szkola}
+              </li>
+            ))}
+          </ul>
+        </section>
+    </main>
   </StrictMode>,
 )
