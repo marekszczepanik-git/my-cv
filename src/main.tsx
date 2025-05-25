@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import './style.scss'
 
 interface Experience {
   year: number;
@@ -32,17 +33,17 @@ const cvData: CVData = {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <main>
-        <header>
+    <main className='cv-main'>
+        <header className='cv-header'>
           <h1>CV {cvData.name} {cvData.lastName}</h1>
         </header>
-        <aside>
+        <aside className='cv-personal'>
           <h2>Dane osobowe</h2>
-          <img src={cvData.photo} alt={`${cvData.name} ${cvData.lastName} zdjęcie profilowe`} />
+          <img className='cv-photo' src={cvData.photo} alt={`${cvData.name} ${cvData.lastName} zdjęcie profilowe`} />
           <p>{cvData.name} {cvData.lastName}</p>
           <small>{cvData.position}</small>
         </aside>
-        <section>
+        <section className='cv-detail'>
           <h2>Doświadczenie zawodowe</h2>
           <ul>
             {cvData.experience.map(doswiadczenie =>(
