@@ -1,0 +1,15 @@
+@import '../variables';
+
+.cv-personal {
+    grid-area: personal; // Zajmuje lewy obrzar - pierwsza kolumna
+    padding: $main-gap;
+    background-color: #eee;
+    text-align: center;
+
+    .cv-photo {
+        margin-top: $main-gap;
+        margin-bottom: $main-gap;
+        width: 100%; 
+        border-radius: 50%; // Zdjęcie w kole
+    }
+}

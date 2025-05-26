@@ -1,0 +1,7 @@
+@import '../variables';
+
+.cv-header {
+    grid-area: header; // Zajmuje obszar dwóch kolumn według definicji w cv-main
+    padding: $main-gap; // Uycie zmiennej
+    text-align: center;
+}

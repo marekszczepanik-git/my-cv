@@ -1,5 +1,4 @@
-
-$main-gap: 20px; // Zmienna
+@import './variables';
 
 // Reset początkowy dla wszystkiego
 * {
@@ -20,41 +19,4 @@ ul {
 
 h2 {
     margin-bottom: $main-gap;
-}
-
-.cv-main {
-    max-width: 850px; // Maksymalna szerokość
-    width: 100%; // Maksymalna szerokość okna 100%
-    margin: 0 auto; // Margines góra/dół 0, lewy-prawy automatyczny
-    display: grid; // Wyświetlamy wszystkie elementy w siatce grid
-    grid-template-areas: "header header" "personal details"; // Definiowanie obszarów siatki
-    grid-template-columns: 250px 1fr; // Definiowanie szerokości kolumn
-
-}
-
-.cv-header {
-    grid-area: header; // Zajmuje obszar dwóch kolumn według definicji w cv-main
-    padding: $main-gap; // Uycie zmiennej
-    text-align: center;
-}
-
-.cv-personal {
-    grid-area: personal; // Zajmuje lewy obrzar - pierwsza kolumna
-    padding: $main-gap;
-    background-color: #eee;
-    text-align: center;
-
-    .cv-photo {
-        margin-top: $main-gap;
-        margin-bottom: $main-gap;
-        width: 100%; 
-        border-radius: 50%; // Zdjęcie w kole
-    }
-}
-
-.cv-detail {
-    grid-area: details; // Zajmuje prawy obrzar - druga kolumna
-    padding: $main-gap;
-    text-align: center;
-    background-color: #fafafa;
 }
