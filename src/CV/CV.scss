@@ -10,29 +10,7 @@
 
 }
 
-.cv-header {
-    grid-area: header; // Zajmuje obszar dwóch kolumn według definicji w cv-main
-    padding: $main-gap; // Uycie zmiennej
-    text-align: center;
-}
 
-.cv-personal {
-    grid-area: personal; // Zajmuje lewy obrzar - pierwsza kolumna
-    padding: $main-gap;
-    background-color: #eee;
-    text-align: center;
 
-    .cv-photo {
-        margin-top: $main-gap;
-        margin-bottom: $main-gap;
-        width: 100%; 
-        border-radius: 50%; // Zdjęcie w kole
-    }
-}
 
-.cv-detail {
-    grid-area: details; // Zajmuje prawy obrzar - druga kolumna
-    padding: $main-gap;
-    text-align: center;
-    background-color: #fafafa;
-}
+
