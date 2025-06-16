@@ -1,7 +1,7 @@
 import { Details } from '../Details/Details';
 import { Header } from '../Header/Header';
 import { Personal } from '../Personal/Personal';
-import { CVData } from '../types';
+import type { CVData } from '../types';
 import './CV.scss';
 
 
